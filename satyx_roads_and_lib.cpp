@@ -60,7 +60,10 @@ int main()
         }
 	   
         int comp = components(&adj,n);
-        cout<<c_r*(n-comp)+c_l*comp<<endl;
+        if(n*c_l>c_r*(n-comp)+c_l*comp)
+            cout<<c_r*(n-comp)+c_l*comp<<endl;
+        else
+            cout<<n*c_l<<endl;
     }
 	return 0;
 }
