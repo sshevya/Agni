@@ -46,7 +46,7 @@ int main()
     while(t-->0)
     {
         int n,m,c_r,c_l;
-        cin>>n>>m>>c_r>>c_l;
+        cin>>n>>m>>c_l>>c_r;
         vector<int> parent(n,-1);
         vector<int> key(n,INT_MAX);
         vector<vector<int> > adj(n,vector<int> (0));
