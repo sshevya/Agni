@@ -14,7 +14,7 @@ long long substrings(string n) {
     
               num[i]=n[i]-'0';
         sum+=(num[i]*f*len)%M;  
-        f=(f*10+1)%M;
+        f=(f*10+1)%M;    //larger the number, difficult it is to find mod, hence find mod after each step
         len--;  
     }
 return sum%M;
