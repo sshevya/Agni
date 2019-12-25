@@ -1,3 +1,6 @@
+/* see discussion, another solution where entire matrix is not needed only 2 rows would work */
+
+
 #include <bits/stdc++.h>
 
 using namespace std;
