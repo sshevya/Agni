@@ -39,6 +39,18 @@ int components(vector<vector<int> > *adj,int n)
     return count;
 }
 
+long int roadsAndLibraries(int n, int c_lib, int c_road, vector<vector<int>> cities)
+{
+    long int comp = components(&cities,n);
+    long int cost1 = c_road*(n-comp)+c_lib*comp;
+    long int cost2 = (long int)(n)*c_lib;
+        if(cost2>cost1)
+            return cost1;
+        else
+            return cost2;
+
+}
+
 int main()
 {
     int t;
@@ -58,12 +70,8 @@ int main()
             adj[b-1].push_back(a-1);
                                            
         }
-	   
-        int comp = components(&adj,n);
-        if(n*c_l>c_r*(n-comp)+c_l*comp)
-            cout<<c_r*(n-comp)+c_l*comp<<endl;
-        else
-            cout<<n*c_l<<endl;
+	    cout<<roadsAndLibraries(n,c_l,c_r,adj)<<endl;
+        
     }
 	return 0;
 }
